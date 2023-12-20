@@ -1,4 +1,7 @@
 # Deno WebRTC Chat
+
+## WIP -- Not yet complete!
+
 ## A super secure Chat-App 
 This app leverages a Deno signalling service to signal/connect two RTC-Peers.    
 
