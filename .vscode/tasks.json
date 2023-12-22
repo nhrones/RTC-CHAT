@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-         "label": "Run SSE Chat",
+         "label": "RTC Chat",
          "type": "deno",
          "command": "run",
          "args": [
