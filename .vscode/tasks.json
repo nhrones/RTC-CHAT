@@ -1,19 +1,16 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
+   "version": "2.0.0",
+   "tasks": [
+      {
+         "label": "BUILD",
+         "type": "shell",
+         "command": "build"
+      },
+      {
          "label": "RTC Chat",
          "type": "deno",
          "command": "run",
-         "args": [
-             "-A",
-             "--unstable",
-             "server.ts"
-         ],
-         "problemMatcher": [
-             "$deno"
-         ],
-     },
-    ]
-    
+         "args": ["-A", "--unstable", "server.ts"]
+      },
+   ]
 }

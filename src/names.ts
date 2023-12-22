@@ -326,10 +326,10 @@ const last = ["people", "history", "way", "art", "world", "information", "map", 
    "stretch", "stupid", "tear", "temporary", "tomorrow", "wrap", "yesterday", "Thomas", "Tom", "Lieuwe"
 ];
 
-function capIt (string) {
-   return string.charAt(0).toUpperCase() + string.slice(1);
+function capIt (name: string) {
+   return name.charAt(0).toUpperCase() + name.slice(1);
 }
 
-function getRandomInt(min, max) {
+function getRandomInt(min: number, max: number) {
    return Math.floor(Math.random() * (max - min)) + min;
 }

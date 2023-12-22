@@ -21,7 +21,7 @@ I like to open each side-by-side, in two separate browser windows.
 
 <br/>
 
-![chats](./chats.png)  
+![chats](./media/chats.png)  
 
 ## Signalling service 
 The Sinalling service is used to bridge two different isolates and/or regions.    
@@ -32,7 +32,7 @@ Once signalling has completed, they will share a direct data-pipe with each othe
 <br/>
 
 
-![comms](comms.png)  
+![comms](./media/comms.png)  
 
 <br/>
 

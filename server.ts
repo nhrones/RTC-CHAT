@@ -2,11 +2,11 @@ import { join, serveFile } from './deps.ts'
 import { openWebsite } from "https://raw.githubusercontent.com/nhrones/Browser/master/browser.ts"
 import { port, targetFolder } from './constants.ts'
 import { postMessage } from './post.ts'
-import { registerClient } from './send.ts'
+import { registerClient } from './dispatch.ts'  //'./send.ts'
 
 
 const RunningOnDeploy = !!Deno.env.get("DENO_REGION")
-const DEBUG = !!Deno.env.get("DEBUG")
+const DEBUG = true//!!Deno.env.get("DEBUG")
 console.log(`DEBUG = ${DEBUG}, RunningOnDeploy = ${RunningOnDeploy}`)
 
 //=================================================
@@ -23,7 +23,7 @@ function handleRequest(request: Request): Response | Promise<Response> {
    // Get and adjust the requested path name
    let { pathname } = new URL(request.url); // get the path name
    if (pathname === '/') pathname = '/index.html'; // fix root
-   
+   console.log('path ', pathname)
    //=================================================
    //  request to register for Server Sent Events   //
    //=================================================
@@ -35,7 +35,7 @@ function handleRequest(request: Request): Response | Promise<Response> {
    //=================================================
    //  A POST request: client is sending a message  //
    //================================================= 
-   else if (request.method === 'POST') {
+   else if (pathname.includes("api/dispatch")) {   //(request.method === 'POST') {
       if (DEBUG) console.log('handling POST request!')
       return postMessage(request)
    }

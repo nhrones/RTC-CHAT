@@ -1,7 +1,7 @@
 
 const DEBUG = true
 
-export const handler = (_req: Request): Response => {
+export const registerClient = (_req: Request): Response => {
 
     const { searchParams } = new URL(_req.url);
 
@@ -34,7 +34,7 @@ class SignalConnection {
             return new Response("", { status: 404 })
         }
 
-        const sseChannel = new BroadcastChannel("game");
+        const sseChannel = new BroadcastChannel("chat");
 
         SignalConnection.connections++
 
